@@ -23,16 +23,19 @@ function Login() {
     }
   };
 
-  return (
-    <div>
-      <h2>Welcome back</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Login</button>
-      </form>
-      <p>{message}</p>
-      <p>New here? <Link to="/register">Register</Link></p>
+    return (
+    <div className="auth-page">
+      <div className="auth-card">
+        <h2>Welcome back</h2>
+        <p className="subtitle">Your Nest is right where you left it.</p>
+        <form onSubmit={handleSubmit}>
+          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <button type="submit">Login</button>
+        </form>
+        <p className="message">{message}</p>
+        <p className="switch">New here? <Link to="/register">Register</Link></p>
+      </div>
     </div>
   );
 }

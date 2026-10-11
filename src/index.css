@@ -19,6 +19,8 @@ body {
   color: var(--text);
 }
 
+/* ---------- Auth pages ---------- */
+
 .auth-page {
   min-height: 100vh;
   display: flex;
@@ -100,6 +102,8 @@ body {
   color: var(--accent-dark);
 }
 
+/* ---------- Home ---------- */
+
 .home {
   max-width: 900px;
   margin: 0 auto;
@@ -173,4 +177,587 @@ body {
   color: var(--accent-dark);
   text-decoration: none;
   font-size: 14px;
+}
+
+/* ---------- Everyday Lists ---------- */
+
+.lists-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lists-sidebar,
+.lists-main {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.list-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.list-tab:hover {
+  background: var(--bg);
+}
+
+.list-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.inline-form {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.inline-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.inline-form button {
+  padding: 0 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.item-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.item-text.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.small-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.list-tab.active .small-btn {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .lists-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Notes ---------- */
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.note-form textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.note-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.note-form button {
+  align-self: flex-start;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.note-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.note-card p {
+  margin: 0 0 12px;
+  white-space: pre-wrap;
+}
+
+.note-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ---------- Affirmations ---------- */
+
+.affirmation-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 28px;
+  margin: 24px 0;
+  text-align: center;
+  max-width: 560px;
+}
+
+.affirmation-text {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.affirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.heart-btn,
+.soft-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.soft-btn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.heart-btn:hover {
+  border-color: var(--accent);
+}
+
+.affirmation-form {
+  max-width: 560px;
+}
+
+.fav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 560px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- Chanting ---------- */
+
+.mantra-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 10px;
+}
+
+.chip {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.chant-form {
+  max-width: 420px;
+}
+
+.chant-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  margin-top: 16px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.chant-mantra {
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.chant-ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chant-ring-inner {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chant-count {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.chant-target {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chant-tap {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.chant-tap:active {
+  background: var(--accent-dark);
+}
+
+.chant-done {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.chant-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 10px;
+  flex-wrap: wrap;
+}
+
+.chant-target-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.chant-target-input input {
+  width: 70px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* ---------- Habits ---------- */
+
+.water-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 560px;
+}
+
+.water-card h3 {
+  margin: 0 0 12px;
+}
+
+.glass-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.glass {
+  font-size: 24px;
+  opacity: 0.25;
+}
+
+.glass.filled {
+  opacity: 1;
+}
+
+.water-text {
+  margin: 10px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.water-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.habit-form {
+  max-width: 560px;
+}
+
+.habit-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+  max-width: 560px;
+}
+
+.habit-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.habit-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.week-strip {
+  display: flex;
+  gap: 10px;
+}
+
+.week-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.week-label {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.dot.on {
+  background: var(--accent);
+}
+
+.streak {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- Budget ---------- */
+
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+  max-width: 640px;
+}
+
+.summary-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.summary-value {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.green {
+  color: #5a8a63;
+}
+
+.red {
+  color: #b5534a;
+}
+
+.budget-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.type-toggle {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.budget-form input,
+.budget-form select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+  flex: 1;
+  min-width: 120px;
+}
+
+.budget-add {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.breakdown {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.breakdown h3 {
+  margin: 0 0 12px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 80px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.bar-track {
+  background: var(--border);
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background: var(--accent);
+  height: 100%;
+  border-radius: 6px;
+}
+
+.bar-amount {
+  text-align: right;
+  color: var(--muted);
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.entries {
+  max-width: 640px;
+}
+
+.entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry-title {
+  font-size: 15px;
+}
+
+.entry-cat {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.entry-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
 }

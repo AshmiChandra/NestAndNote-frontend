@@ -19,7 +19,7 @@ function Register() {
         setMessage(res.data);
       }
     } catch (err) {
-      setMessage("Something went wrong. Is the backend running?");
+      setMessage("Something went wrong. Try again later.");
     }
   };
 
